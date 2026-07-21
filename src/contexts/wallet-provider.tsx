@@ -23,7 +23,7 @@ import { useToast } from '@/hooks/use-toast';
 import { getInitialAssets } from '@/lib/wallets/balances';
 import type { PriceResult } from '@/lib/market/price-service';
 import { backgroundSyncWorker, type SyncDiagnostic } from '@/lib/wallets/background-sync-worker';
-mport { useRealtimeGateway } from '@/hooks/useRealtimeGateway';
+import { useRealtimeGateway } from '@/hooks/useRealtimeGateway';
 import { systemEmitter } from '@/lib/events/systemEmitter';
 
 interface WalletContextType {
