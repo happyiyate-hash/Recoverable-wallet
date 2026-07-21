@@ -95,7 +95,7 @@ export function WalletProvider({ children }: { children: ReactNode }) {
   const { chainsWithLogos, allChainsMap } = useNetworkLogos();
   const { user, profile, loading: authLoading, signOut, refreshProfile, isTerminalLocked } = useUser();
   const { prices, registerCustomTokens } = useMarket();
-  
+
   const [isRequestOverlayOpen, setIsRequestOverlayOpen] = useState(false);
   const [isNotificationsOpen, setIsNotificationsOpen] = useState(false);
   const [isQuickSwapOpen, setIsQuickSwapOpen] = useState(false);
@@ -160,7 +160,7 @@ export function WalletProvider({ children }: { children: ReactNode }) {
    */
   const isSynced = useMemo(() => {
     if (!profile || !wallets || !isInitialized) return true;
-    
+
     // Check primary EVM node
     const evmLocal = wallets.find(w => w.type === 'evm')?.address;
     if (evmLocal && profile.evm_address !== evmLocal) return false;
@@ -183,24 +183,24 @@ export function WalletProvider({ children }: { children: ReactNode }) {
   const runCloudDiagnostic = useCallback(async (force = false) => {
     const userId = user?.id;
     const hasMnemonic = userId && !!localStorage.getItem(`ss-mnemonic-${userId}`);
-    
+
     if (!userId || !wallets?.length || !accountNumber || !chainsWithLogos.length || isTerminalLocked || !hasMnemonic) {
       return;
     }
-    
+
     const sessionKey = `ss-sync-lock-${userId}`;
     const alreadySyncedInSession = typeof window !== 'undefined' && sessionStorage.getItem(sessionKey);
-    
+
     if (!force && alreadySyncedInSession) {
       return;
     }
-    
+
     if (isSyncingRef.current) return;
-    
+
     if (syncAbortControllerRef.current) syncAbortControllerRef.current.abort();
     syncAbortControllerRef.current = new AbortController();
     const signal = syncAbortControllerRef.current.signal;
-    
+
     isSyncingRef.current = true
    try {
       await refreshProfile();
@@ -226,7 +226,9 @@ export function WalletProvider({ children }: { children: ReactNode }) {
     if (syncAbortControllerRef.current) syncAbortControllerRef.current.abort();
     isSyncingRef.current = false;
     setSyncDiagnostic({ status: 'idle', chain: null, localValue: null, cloudValue: null, progress: 0 });
-  }, []);useEffect(() => {
+  }, []);
+
+  useEffect(() => {
     if (!user?.id || !supabase) return;
 
     if (subscriptionRef.current) {
@@ -295,7 +297,7 @@ export function WalletProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     if (authLoading) return;
-    
+
     if (!user) {
       setWallets(null);
       setAccountNumber(null);
@@ -308,8 +310,7 @@ export function WalletProvider({ children }: { children: ReactNode }) {
       setIsWalletLoading(false);
       return;
     }
-
-    const userId = user.id;
+        const userId = user.id;
     setIsWalletLoading(true);
     const savedMnemonic = localStorage.getItem(`ss-mnemonic-${userId}`);
     if (!savedMnemonic) {
@@ -369,7 +370,7 @@ const savedTokens = localStorage.getItem(`custom_tokens_${userId}`);
 
     const base = getInitialAssets(effectiveViewingNetwork.chainId);
     const custom = userAddedTokens.filter(t => t.chainId === effectiveViewingNetwork.chainId);
-    
+
     const registry = [...base, ...custom].reduce((acc, curr) => {
       const id = curr.isNative ? curr.symbol : curr.address?.toLowerCase();
       if (!acc.find(a => (a.isNative ? a.symbol : a.address?.toLowerCase()) === id)) {
@@ -392,7 +393,8 @@ const savedTokens = localStorage.getItem(`custom_tokens_${userId}`);
       decimals: 0,
       iconUrl: WNC_LOGO_URL
     } as AssetRow;
-const chainBalances = balances[effectiveViewingNetwork.chainId] || [];
+
+    const chainBalances = balances[effectiveViewingNetwork.chainId] || [];
     const brandTokenSymbol = BRAND_TOKEN_MAP[effectiveViewingNetwork.chainId];
 
     const mappedAssets = registry.map(asset => {
@@ -400,7 +402,7 @@ const chainBalances = balances[effectiveViewingNetwork.chainId] || [];
       const pId = (asset.priceId || asset.coingeckoId || asset.address || '').toLowerCase();
       const p = prices[pId];
       const livePrice = p?.price || 0;
-      
+
       return { 
         ...asset, 
         balance: balDoc?.balance || '0', 
@@ -433,7 +435,7 @@ const chainBalances = balances[effectiveViewingNetwork.chainId] || [];
 
   const fetchNotifications = useCallback(async () => {
     if (!user || !supabase || isTerminalLocked) return;
-    
+
     // 🛡️ STALE DATA GUARD: Block redundant fetching immediately after mark-as-read
     if (Date.now() - lastReadTimestampRef.current < 4000) return;
 
@@ -485,7 +487,7 @@ const chainBalances = balances[effectiveViewingNetwork.chainId] || [];
                 items: [newItem, ...prev.items]
               };
             });
-            
+
 toast({
               title: `🔔 ${newItem.title || 'New Notification'}`,
               description: newItem.message || "New activity detected in your registry node.",
@@ -526,8 +528,7 @@ toast({
       }
     };
   }, [user?.id, isTerminalLocked, fetchNotifications, toast, wallets, chainsWithLogos, infuraApiKey, effectiveViewingNetwork]);
-
-  const markNotificationsAsRead = useCallback(async () => {
+    const markNotificationsAsRead = useCallback(async () => {
     if (!user?.id || !notifications.items.length) return;
     const unreadItems = notifications.items.filter(n => !n.is_read);
     if (unreadItems.length === 0) return;
@@ -575,36 +576,37 @@ toast({
     if (!user) throw new Error("Auth required");
     const { generateMnemonic } = await import('bip39');
     const mnemonic = generateMnemonic();
-    
+
     const userId = user.id;
     localStorage.setItem(`ss-mnemonic-${userId}`, mnemonic);
-    
+
     const derived = await deriveAllWallets(mnemonic);
     const targetAcc = profile?.account_number || `835${Math.floor(Math.random() * 9000000 + 1000000)}`;
-    
+
     setWallets(derived);
     setAccountNumber(targetAcc);
     localStorage.setItem(`account_number_${userId}`, targetAcc);
     localStorage.setItem(`ss-cached-wallets-${userId}`, JSON.stringify(derived));
-    
+
     await saveVaultToCloud(userId, mnemonic);
     await syncAddressesToCloud(userId, derived, targetAcc);
-    
+
     setIsInitialized(true);
     setTimeout(() => runCloudDiagnostic(true), 1500);
     return mnemonic;
   }, [user?.id, profile?.account_number, runCloudDiagnostic]);
-const importWallet = useCallback(async (mnemonic: string) => {
+
+  const importWallet = useCallback(async (mnemonic: string) => {
     if (!user) throw new Error("Auth required");
     const { validateMnemonic } = await import('bip39');
     if (!validateMnemonic(mnemonic)) throw new Error("Invalid node phrase.");
-    
+
     const userId = user.id;
     localStorage.setItem(`ss-mnemonic-${userId}`, mnemonic);
-    
+
     const derived = await deriveAllWallets(mnemonic);
     const targetAcc = profile?.account_number || `835${Math.floor(Math.random() * 9000000 + 1000000)}`;
-    
+
     setWallets(derived);
     setAccountNumber(targetAcc);
     localStorage.setItem(`account_number_${userId}`, targetAcc);
@@ -617,21 +619,21 @@ const importWallet = useCallback(async (mnemonic: string) => {
   const restoreFromCloud = useCallback(async (onStatusUpdate?: (status: string) => void) => {
     if (!user || !profile?.vault_phrase) throw new Error("Vault node not found in cloud registry.");
     const userId = user.id;
-    
+
     if (onStatusUpdate) onStatusUpdate('Decrypting Vault...');
     try {
       const mnemonic = await decryptValueFromServer(profile.vault_phrase, profile.iv || '');
-      
+
       if (onStatusUpdate) onStatusUpdate('Re-calculating Nodes...');
       const derived = await deriveAllWallets(mnemonic);
       const targetAcc = profile.account_number || `835${Math.floor(Math.random() * 9000000 + 1000000)}`;
-      
+
       localStorage.setItem(`ss-mnemonic-${userId}`, mnemonic);
       setWallets(derived);
       setAccountNumber(targetAcc);
       localStorage.setItem(`account_number_${userId}`, targetAcc);
       localStorage.setItem(`ss-cached-wallets-${userId}`, JSON.stringify(derived));
-      
+
       await syncAddressesToCloud(userId, derived, targetAcc);
 
       if (profile.vault_infura_key && profile.infura_iv) {
@@ -717,14 +719,14 @@ const importWallet = useCallback(async (mnemonic: string) => {
     const handleBalanceUpdated = (payload: any) => {
       // payload format: { chain: string, tokenAddress: string, balance: string, blockNumber: number }
       const chainKey = payload.chain || (effectiveViewingNetwork ? effectiveViewingNetwork.chainId.toString() : 'unknown');
-      
+
       // Stale Block Guard
       const currentHighest = highestBlockRef.current[chainKey] || 0;
       if (payload.blockNumber && payload.blockNumber < currentHighest) {
-         console.warn(`[STATE_GUARD] Rejected stale balance update for ${chainKey}. Received: ${payload.blockNumber}, Current: ${currentHighest}`);
+                 console.warn(`[STATE_GUARD] Rejected stale balance update for ${chainKey}. Received: ${payload.blockNumber}, Current: ${currentHighest}`);
          return;
       }
-      
+
       if (payload.blockNumber) {
          highestBlockRef.current[chainKey] = payload.blockNumber;
       }
@@ -795,7 +797,8 @@ const handleNotification = (payload: any) => {
             setAccountNumber(null); 
             setIsInitialized(false);
             router.replace('/wallet-session'); 
-        } },
+        } 
+    },
     deleteWalletPermanently: async () => {
         if (!user) return;
         const userId = user.id;
@@ -805,12 +808,12 @@ const handleNotification = (payload: any) => {
             setWallets(null);
             setAccountNumber(null);
             setIsInitialized(false);
-            
+
             toast({
                 title: "Vault Terminated",
                 description: "All cloud and local wallet nodes have been purged.",
             });
-            
+
             router.replace('/wallet-session');
         } catch (e) {
             toast({
