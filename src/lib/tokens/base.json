@@ -1,0 +1,7 @@
+
+[
+  { "symbol": "ETH", "name": "Ethereum", "address": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee", "decimals": 18, "coingeckoId": "ethereum", "isNative": true },
+  { "symbol": "USDC", "name": "USD Coin", "address": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913", "decimals": 6, "coingeckoId": "usd-coin" },
+  { "symbol": "USDT", "name": "Tether USD", "address": "0xfde4C96c8593536E31F229EA8f37b2ADa2699bb2", "decimals": 6, "coingeckoId": "tether" },
+  { "symbol": "AERO", "name": "Aerodrome", "address": "0x940181a94A35A4569E4529A3CDfB74e38FD98631", "decimals": 18, "coingeckoId": "aerodrome-finance" }
+]

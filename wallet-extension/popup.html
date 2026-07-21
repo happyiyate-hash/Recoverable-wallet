@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Node Quick Terminal</title>
+  <style>
+    body {
+      width: 320px;
+      padding: 24px;
+      background: #050505;
+      color: #e0e0e0;
+      font-family: 'Inter', -apple-system, sans-serif;
+      margin: 0;
+      overflow: hidden;
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+    .logo-box {
+      width: 48px;
+      height: 48px;
+      background: rgba(139, 92, 246, 0.1);
+      border: 1px solid rgba(139, 92, 246, 0.2);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 12px;
+      color: #8b5cf6;
+    }
+    h2 {
+      margin: 0;
+      font-size: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      font-weight: 900;
+      color: #fff;
+    }
+    .status-badge {
+      font-size: 8px;
+      text-transform: uppercase;
+      font-weight: 900;
+      color: #8b5cf6;
+      opacity: 0.6;
+      letter-spacing: 0.2em;
+      margin-top: 4px;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      padding: 20px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .origin-label {
+      font-size: 9px;
+      font-weight: 900;
+      color: #8b5cf6;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 10px;
+      display: block;
+    }
+    #request-message {
+      font-size: 13px;
+      font-weight: 600;
+      margin: 0;
+      line-height: 1.5;
+      color: #ccc;
+    }
+    .actions {
+      display: flex;
+      gap: 12px;
+    }
+    .btn {
+      flex: 1;
+      height: 48px;
+      border: none;
+      border-radius: 14px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-size: 11px;
+    }
+    .btn-primary {
+      background: #8b5cf6;
+      color: white;
+      box-shadow: 0 4px 20px rgba(139, 92, 246, 0.2);
+    }
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.05);
+      color: #888;
+    }
+    .btn:active {
+      transform: scale(0.96);
+    }
+    .footer {
+      text-align: center;
+      margin-top: 24px;
+      font-size: 8px;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.15);
+      letter-spacing: 0.1em;
+    }
+    #default-view { display: block; }
+    #approval-view { display: none; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="logo-box">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+    </div>
+    <h2>Node Quick</h2>
+    <div class="status-badge">Institutional Vault v4.0</div>
+  </div>
+
+  <div id="default-view">
+    <div class="card">
+      <span class="origin-label">Identity Node</span>
+      <p id="address" style="font-family: monospace; font-size: 11px; color: #fff; margin: 0;">Initializing...</p>
+    </div>
+    <p style="text-align: center; font-size: 10px; color: #555; font-weight: 600; text-transform: uppercase;">Awaiting dApp Interaction</p>
+  </div>
+
+  <div id="approval-view">
+    <div class="card">
+      <span class="origin-label" id="request-origin">---</span>
+      <p id="request-message">Authorize request</p>
+    </div>
+    <div class="actions">
+      <button id="reject" class="btn btn-secondary">Deny</button>
+      <button id="approve" class="btn btn-primary">Authorize</button>
+    </div>
+  </div>
+
+  <div class="footer">Handshake Protocol Verified</div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

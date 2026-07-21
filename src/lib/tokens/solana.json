@@ -1,0 +1,6 @@
+
+[
+  { "symbol": "SOL", "name": "Solana", "address": "So11111111111111111111111111111111111111112", "decimals": 9, "coingeckoId": "solana", "isNative": true },
+  { "symbol": "USDC", "name": "USD Coin", "address": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v", "decimals": 6, "coingeckoId": "usd-coin" },
+  { "symbol": "USDT", "name": "Tether USD", "address": "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB", "decimals": 6, "coingeckoId": "tether" }
+]

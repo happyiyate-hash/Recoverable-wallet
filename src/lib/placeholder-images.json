@@ -1,0 +1,16 @@
+{
+  "placeholderImages": [
+    {
+      "id": "pwa-icon-192",
+      "description": "PWA Icon 192x192",
+      "imageUrl": "/icons/icon-192.png",
+      "imageHint": "wallet icon"
+    },
+    {
+      "id": "pwa-icon-512",
+      "description": "PWA Icon 512x512",
+      "imageUrl": "/icons/icon-512.png",
+      "imageHint": "wallet logo"
+    }
+  ]
+}

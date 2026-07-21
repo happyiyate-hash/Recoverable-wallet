@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node Quick Authority Handshake</title>
+    <style>
+        body { margin: 0; padding: 0; background-color: #050505; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+        .container { max-width: 600px; margin: 0 auto; background-color: #0a0a0c; border: 1px solid #1a1a1c; border-radius: 40px; overflow: hidden; margin-top: 40px; margin-bottom: 40px; }
+        .header { padding: 40px; text-align: center; border-bottom: 1px solid #1a1a1c; }
+        .logo-box { width: 64px; height: 64px; background-color: rgba(245, 158, 11, 0.1); border: 1px solid rgba(245, 158, 11, 0.2); border-radius: 20px; display: inline-flex; align-items: center; justify-content: center; margin-bottom: 20px; }
+        .content { padding: 48px; text-align: center; }
+        h1 { color: #ffffff; font-size: 24px; font-weight: 900; text-transform: uppercase; letter-spacing: 0.15em; margin: 0; margin-bottom: 12px; }
+        p { color: #888888; font-size: 14px; line-height: 1.6; margin: 0; margin-bottom: 24px; }
+        .code-container { background-color: #000000; border: 2px solid #f59e0b; border-radius: 24px; padding: 24px; margin: 32px 0; box-shadow: 0 0 40px rgba(245, 158, 11, 0.15); }
+        .verification-code { color: #f59e0b; font-size: 48px; font-weight: 900; letter-spacing: 0.2em; font-family: 'Monaco', 'Consolas', monospace; margin: 0; }
+        .footer { padding: 40px; background-color: rgba(255, 255, 255, 0.02); border-top: 1px solid #1a1a1c; text-align: center; }
+        .security-note { color: rgba(245, 158, 11, 0.6); font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; display: block; margin-bottom: 12px; }
+        .legal { color: #444444; font-size: 11px; margin: 0; }
+        .highlight { color: #ffffff; font-weight: 700; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo-box">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            </div>
+            <h1>Identity Handshake</h1>
+            <div style="font-size: 10px; color: #f59e0b; font-weight: 900; letter-spacing: 0.3em; text-transform: uppercase;">Registry Sync Protocol</div>
+        </div>
+        <div class="content">
+            <p>A request to provision or restore your <span class="highlight">Node Quick Hardware Vault</span> was initiated. Use the following cryptographic code to authorize the handshake.</p>
+            <div class="code-container">
+                <div class="verification-code">642819</div>
+            </div>
+            <p style="font-size: 12px; color: #555;">This code will expire in <span class="highlight">10 minutes</span>. If you did not initiate this node request, please ignore this email or contact the registry sentinel.</p>
+        </div>
+        <div class="footer">
+            <span class="security-note">Registry Sentinel v4.0 Active</span>
+            <p class="legal">© 2024 Node Quick Terminal. All rights reserved.<br>Authorized for institutional use only.</p>
+        </div>
+    </div>
+</body>
+</html>

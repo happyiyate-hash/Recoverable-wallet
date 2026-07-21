@@ -1,0 +1,186 @@
+{
+  "entities": {
+    "UserProfile": {
+      "title": "UserProfile",
+      "description": "Extended SmarterSeller identity with multi-chain registry nodes and security status.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "email": { "type": "string", "format": "email" },
+        "photo_url": { "type": "string" },
+        "phone_number": { "type": "string" },
+        "phone_verified": { "type": "boolean" },
+        "phone_country_code": { "type": "string" },
+        "bio": { "type": "string" },
+        "country_code": { "type": "string" },
+        "country": { "type": "string" },
+        "kyc_status": { "enum": ["not_started", "pending", "verified", "rejected"], "type": "string" },
+        "kyc_verified_at": { "type": "string", "format": "date-time" },
+        "pin_enabled": { "type": "boolean" },
+        "pin_hash": { "type": "string" },
+        "pin_attempts": { "type": "integer", "default": 0 },
+        "pin_locked_until": { "type": "string", "format": "date-time" },
+        "mfa_enabled": { "type": "boolean", "default": false },
+        "mfa_secret": { "type": "string" },
+        "mfa_last_verified": { "type": "string", "format": "date-time" },
+        "biometric_enabled": { "type": "boolean" },
+        "face_id_enabled": { "type": "boolean" },
+        "face_id_embedding": { "type": "string" },
+        "wnc_earnings": { "type": "number" },
+        "wnc_referral_escrow": { "type": "number" },
+        "tokens": { "type": "number", "description": "AI node credits balance." },
+        "plan_type": { "type": "string", "default": "Free" },
+        "premium_expires_at": { "type": "string", "format": "date-time" },
+        "account_number": { "type": "string" },
+        "evm_address": { "type": "string" },
+        "solana_address": { "type": "string" },
+        "btc_address": { "type": "string" },
+        "ltc_address": { "type": "string" },
+        "doge_address": { "type": "string" },
+        "xrp_address": { "type": "string" },
+        "polkadot_address": { "type": "string" },
+        "kusama_address": { "type": "string" },
+        "near_address": { "type": "string" },
+        "cosmos_address": { "type": "string" },
+        "osmosis_address": { "type": "string" },
+        "secret_address": { "type": "string" },
+        "injective_address": { "type": "string" },
+        "celestia_address": { "type": "string" },
+        "cardano_address": { "type": "string" },
+        "tron_address": { "type": "string" },
+        "algorand_address": { "type": "string" },
+        "hedera_address": { "type": "string" },
+        "tezos_address": { "type": "string" },
+        "aptos_address": { "type": "string" },
+        "sui_address": { "type": "string" },
+        "starknet_address": { "type": "string" },
+        "bep2_address": { "type": "string" },
+        "bch_address": { "type": "string" },
+        "onboarding_completed": { "type": "boolean" },
+        "average_rating": { "type": "number" },
+        "review_count": { "type": "number" },
+        "tier": { "type": "integer", "default": 1 },
+        "is_disabled": { "type": "boolean", "default": false },
+        "protection_pin_hash": { "type": "string" },
+        "security_locked": { "type": "boolean", "default": false },
+        "last_login_device": { "type": "string" },
+        "is_blocked": { "type": "boolean", "default": false },
+        "block_reason": { "type": "string" },
+        "passkey_hash": { "type": "string", "description": "Secure one-way hash of the master passkey." },
+        "risk_score": { "type": "integer", "default": 0 },
+        "behavior_profile": { "type": "object", "description": "AI behavior node training data." }
+      }
+    },
+    "EscrowTransaction": {
+      "title": "EscrowTransaction",
+      "description": "Registry of marketplace trust nodes.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "sender_id": { "type": "string" },
+        "receiver_id": { "type": "string" },
+        "amount": { "type": "number" },
+        "status": { "type": "string" },
+        "description": { "type": "string" },
+        "dispute_reason": { "type": "string" },
+        "resolved_by_admin": { "type": "boolean" },
+        "admin_notes": { "type": "string" },
+        "created_at": { "type": "string", "format": "date-time" },
+        "updated_at": { "type": "string", "format": "date-time" }
+      }
+    },
+    "UserActivityLog": {
+      "title": "UserActivityLog",
+      "description": "Registry of user actions for monitoring and fraud detection.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "user_id": { "type": "string" },
+        "action": { "type": "string" },
+        "device": { "type": "string" },
+        "ip_address": { "type": "string" },
+        "metadata": { "type": "object" },
+        "created_at": { "type": "string", "format": "date-time" }
+      }
+    },
+    "FraudAlert": {
+      "title": "FraudAlert",
+      "description": "Registry of detected suspicious behavior nodes.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "user_id": { "type": "string" },
+        "alert_type": { "type": "string" },
+        "severity": { "enum": ["low", "medium", "high"], "type": "string" },
+        "message": { "type": "string" },
+        "resolved": { "type": "boolean", "default": false },
+        "created_at": { "type": "string", "format": "date-time" }
+      }
+    },
+    "KYCProfile": {
+      "title": "KYCProfile",
+      "description": "Sensitive identity nodes for institutional verification.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "user_id": { "type": "string" },
+        "full_name": { "type": "string" },
+        "date_of_birth": { "type": "string", "format": "date" },
+        "id_type": { "type": "string" },
+        "id_number": { "type": "string" },
+        "id_document_url": { "type": "string" },
+        "selfie_url": { "type": "string" },
+        "status": { "enum": ["pending", "verified", "rejected"], "type": "string" },
+        "notes": { "type": "string" },
+        "created_at": { "type": "string", "format": "date-time" },
+        "updated_at": { "type": "string", "format": "date-time" },
+        "country_code": { "type": "string" }
+      }
+    },
+    "SupportTicket": {
+      "title": "SupportTicket",
+      "description": "Registry of user requests and appeals.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "user_id": { "type": "string" },
+        "type": { "type": "string" },
+        "sub_type": { "type": "string" },
+        "message": { "type": "string" },
+        "status": { "enum": ["open", "in_progress", "closed"], "type": "string" },
+        "admin_notes": { "type": "string" },
+        "created_at": { "type": "string", "format": "date-time" }
+      }
+    }
+  },
+  "auth": {
+    "providers": ["google.com", "password"]
+  },
+  "firestore": {
+    "/profiles/{userId}": {
+      "schema": "UserProfile",
+      "description": "Institutional identity registry."
+    },
+    "/escrow_transactions/{tradeId}": {
+      "schema": "EscrowTransaction",
+      "description": "Marketplace trust registry."
+    },
+    "/user_activity_logs/{logId}": {
+      "schema": "UserActivityLog",
+      "description": "Real-time user monitoring registry."
+    },
+    "/fraud_alerts/{alertId}": {
+      "schema": "FraudAlert",
+      "description": "Suspicious behavior registry."
+    },
+    "/kyc_profiles/{userId}": {
+      "schema": "KYCProfile",
+      "description": "Identity verification registry."
+    },
+    "/security_logs/{userId}": {
+      "schema": "SecurityLog",
+      "description": "Security audit trail."
+    }
+  }
+}

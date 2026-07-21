@@ -1,0 +1,15 @@
+
+[
+  { "symbol": "AVAX", "name": "Avalanche", "address": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee", "decimals": 18, "coingeckoId": "avalanche-2", "isNative": true },
+  { "symbol": "USDT", "name": "Tether USD", "address": "0x9702230A8Ea53601f5cD2dc00fDBc13d4dF4A8c7", "decimals": 6, "coingeckoId": "tether" },
+  { "symbol": "USDC", "name": "USD Coin", "address": "0xB97EF9Ef8734C71904D8002F8b6Bc66Dd9c48a6E", "decimals": 6, "coingeckoId": "usd-coin" },
+  { "symbol": "WBTC", "name": "Wrapped BTC", "address": "0x50b7545627a5162F82A992c33b87aDc75187B218", "decimals": 8, "coingeckoId": "wrapped-bitcoin" },
+  { "symbol": "LINK", "name": "Chainlink", "address": "0x5947BB275c521040051D82396192181b413227A3", "decimals": 18, "coingeckoId": "chainlink" },
+  { "symbol": "DAI.e", "name": "Dai Stablecoin", "address": "0xd586E7F844cEa2F87f50152665BCbc2C279D8d70", "decimals": 18, "coingeckoId": "dai" },
+  { "symbol": "QI", "name": "Benqi", "address": "0x8729438Eb15e2C8B576fCc6Ae1Ad31dD8A8Bf5D9", "decimals": 18, "coingeckoId": "benqi" },
+  { "symbol": "JOE", "name": "Trader Joe", "address": "0x6e84A6216eA6dACC71eC18ceC3f2aE1dF0B19d0D", "decimals": 18, "coingeckoId": "joe" },
+  { "symbol": "PNG", "name": "Pangolin", "address": "0x60781C2586D68229fde47564546784ab3fACA982", "decimals": 18, "coingeckoId": "pangolin" },
+  { "symbol": "GMX", "name": "GMX", "address": "0x62edc0692BD897D2295872a9FFCac5425011c661", "decimals": 18, "coingeckoId": "gmx" },
+  { "symbol": "STG", "name": "Stargate Finance", "address": "0x2F6F07CDcf3588944BF4C42aA3E6d877c08eA9bB", "decimals": 18, "coingeckoId": "stargate-finance" },
+  { "symbol": "AAVE", "name": "Aave", "address": "0x63a72806098Bd3D9520cC43356dD78afe5D386D9", "decimals": 18, "coingeckoId": "aave" }
+]

@@ -1,0 +1,1 @@
+// Redundant file removed. Logic consolidated into page.tsx.

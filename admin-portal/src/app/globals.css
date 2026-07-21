@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #050505;
+  --color-foreground: #ffffff;
+}
+
+@layer base {
+  * {
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+}
+
+body {
+  font-family: inherit;
+}

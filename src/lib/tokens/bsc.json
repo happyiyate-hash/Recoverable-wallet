@@ -1,0 +1,20 @@
+
+[
+  { "symbol": "BNB", "name": "BNB", "address": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee", "decimals": 18, "coingeckoId": "binancecoin", "isNative": true },
+  { "symbol": "USDT", "name": "Tether USD", "address": "0x55d398326f99059fF775485246999027B3197955", "decimals": 18, "coingeckoId": "tether" },
+  { "symbol": "USDC", "name": "USD Coin", "address": "0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d", "decimals": 18, "coingeckoId": "usd-coin" },
+  { "symbol": "BUSD", "name": "Binance USD", "address": "0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56", "decimals": 18, "coingeckoId": "binance-usd" },
+  { "symbol": "CAKE", "name": "PancakeSwap", "address": "0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82", "decimals": 18, "coingeckoId": "pancakeswap-token" },
+  { "symbol": "WBNB", "name": "Wrapped BNB", "address": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c", "decimals": 18, "coingeckoId": "wrapped-bnb" },
+  { "symbol": "BTCB", "name": "Bitcoin BEP2", "address": "0x7130d2A12B9BCbFAe4f2634d864A1Ee1Ce3Ead9c", "decimals": 18, "coingeckoId": "bitcoin-bep2" },
+  { "symbol": "ETH", "name": "Ethereum Token", "address": "0x2170Ed0880ac9A755fd29B2688956BD959F933F8", "decimals": 18, "coingeckoId": "ethereum" },
+  { "symbol": "XRP", "name": "XRP Token", "address": "0x1D2F0dA169ceB9Fc7b3144628dB156f3F6c60dBE", "decimals": 18, "coingeckoId": "ripple" },
+  { "symbol": "ADA", "name": "Cardano Token", "address": "0x3EE2200Efb3400fAbB9AacF31297cBdD1d435D47", "decimals": 18, "coingeckoId": "cardano" },
+  { "symbol": "DOGE", "name": "Dogecoin", "address": "0xbA2aE424d960c26247Dd6c32edC70B295c744C43", "decimals": 18, "coingeckoId": "dogecoin" },
+  { "symbol": "MATIC", "name": "Polygon", "address": "0xcc42724C6683B7E57334c4E856f4c9965ED682bD", "decimals": 18, "coingeckoId": "polygon" },
+  { "symbol": "LTC", "name": "Litecoin", "address": "0x4338665CBB7B2485A8855A139b75D5e34AB0DB94", "decimals": 18, "coingeckoId": "litecoin" },
+  { "symbol": "DOT", "name": "Polkadot", "address": "0x7083609fCE4d1d8Dc0C979AAb8C869Ea2C873402", "decimals": 18, "coingeckoId": "polkadot" },
+  { "symbol": "LINK", "name": "Chainlink", "address": "0xF8A0BF9cF54Bb92F17374d9e9A321E6a111a51bD", "decimals": 18, "coingeckoId": "chainlink" },
+  { "symbol": "UNI", "name": "Uniswap", "address": "0xBf5140A22578168FD562DCcF235E5D43A02ce9B1", "decimals": 18, "coingeckoId": "uniswap" },
+  { "symbol": "TWT", "name": "Trust Wallet", "address": "0x4B0F1812e5Df2A09796481Ff14017e6005508003", "decimals": 18, "coingeckoId": "trust-wallet-token" }
+]

@@ -1,0 +1,18 @@
+
+[
+  { "symbol": "ETH", "name": "Ethereum", "address": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee", "decimals": 18, "coingeckoId": "ethereum", "isNative": true },
+  { "symbol": "OP", "name": "Optimism", "address": "0x4200000000000000000000000000000000000042", "decimals": 18, "coingeckoId": "optimism" },
+  { "symbol": "USDC", "name": "USD Coin", "address": "0x0b2C639c533813f4Aa9D7837CAf62653d097Ff85", "decimals": 6, "coingeckoId": "usd-coin" },
+  { "symbol": "USDT", "name": "Tether USD", "address": "0x94b008aA00579c1307B0EF2c499aD98a8ce58e58", "decimals": 6, "coingeckoId": "tether" },
+  { "symbol": "WBTC", "name": "Wrapped BTC", "address": "0x68f180fcce6836688e9084f035309e29bf0a2095", "decimals": 8, "coingeckoId": "wrapped-bitcoin" },
+  { "symbol": "WETH", "name": "Wrapped Ether", "address": "0x4200000000000000000000000000000000000006", "decimals": 18, "coingeckoId": "weth" },
+  { "symbol": "DAI", "name": "Dai", "address": "0xDA10009cBd5D07dd0CeCc66161FC93D7c9000da1", "decimals": 18, "coingeckoId": "dai" },
+  { "symbol": "LINK", "name": "Chainlink", "address": "0x350a791Bfc2C21F9Ed5d10980Dad2e2638ffa7f6", "decimals": 18, "coingeckoId": "chainlink" },
+  { "symbol": "AAVE", "name": "Aave", "address": "0x76FB31fb4af56892A25e32cFC43De717950c9278", "decimals": 18, "coingeckoId": "aave" },
+  { "symbol": "UNI", "name": "Uniswap", "address": "0x6fd9d7AD17242c41f7131d257212c54A0e816691", "decimals": 18, "coingeckoId": "uniswap" },
+  { "symbol": "VELO", "name": "Velodrome Finance", "address": "0x9560e827aF36c94D2Ac33a39bCE1Fe78631088Db", "decimals": 18, "coingeckoId": "velodrome-finance" },
+  { "symbol": "CRV", "name": "Curve DAO", "address": "0x0994206dfE8De6Ec6920FF4D779B0d950605Fb53", "decimals": 18, "coingeckoId": "curve-dao-token" },
+  { "symbol": "SNX", "name": "Synthetix", "address": "0x8700daec35af8ff88c16bdf041b6c6b1a27c5d12", "decimals": 18, "coingeckoId": "havven" },
+  { "symbol": "LDO", "name": "Lido DAO", "address": "0xFdb794692724153d1488CcdBE0C56c252596735F", "decimals": 18, "coingeckoId": "lido-dao" },
+  { "symbol": "STG", "name": "Stargate Finance", "address": "0x296F55F8FbD41266A2327F7bB9c9d0E9A9B5F6F9", "decimals": 18, "coingeckoId": "stargate-finance" }
+]

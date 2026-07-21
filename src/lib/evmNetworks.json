@@ -1,0 +1,572 @@
+{
+  "1": {
+    "name": "Ethereum",
+    "symbol": "ETH",
+    "chainId": 1,
+    "rpcUrl": "https://mainnet.infura.io/v3/{API_KEY}",
+    "coingeckoId": "ethereum",
+    "themeColor": "#627EEA",
+    "type": "evm"
+  },
+  "137": {
+    "name": "Polygon",
+    "symbol": "POL",
+    "chainId": 137,
+    "rpcUrl": "https://polygon-mainnet.infura.io/v3/{API_KEY}",
+    "coingeckoId": "polygon-ecosystem-token",
+    "themeColor": "#8247E5",
+    "type": "evm"
+  },
+  "8453": {
+    "name": "Base",
+    "symbol": "ETH",
+    "chainId": 8453,
+    "rpcUrl": "https://base-mainnet.infura.io/v3/{API_KEY}",
+    "coingeckoId": "ethereum",
+    "themeColor": "#0052FF",
+    "type": "evm"
+  },
+  "59144": {
+    "name": "Linea",
+    "symbol": "ETH",
+    "chainId": 59144,
+    "rpcUrl": "https://linea-mainnet.infura.io/v3/{API_KEY}",
+    "coingeckoId": "ethereum",
+    "themeColor": "#333333",
+    "type": "evm"
+  },
+  "10": {
+    "name": "Optimism",
+    "symbol": "ETH",
+    "chainId": 10,
+    "rpcUrl": "https://optimism-mainnet.infura.io/v3/{API_KEY}",
+    "coingeckoId": "ethereum",
+    "themeColor": "#FF0420",
+    "type": "evm"
+  },
+  "42161": {
+    "name": "Arbitrum",
+    "symbol": "ETH",
+    "chainId": 42161,
+    "rpcUrl": "https://arbitrum-mainnet.infura.io/v3/{API_KEY}",
+    "coingeckoId": "ethereum",
+    "themeColor": "#28A0F0",
+    "type": "evm"
+  },
+  "81457": {
+    "name": "Blast",
+    "symbol": "BLAST",
+    "chainId": 81457,
+    "rpcUrl": "https://blast-mainnet.infura.io/v3/{API_KEY}",
+    "coingeckoId": "blast",
+    "themeColor": "#FCFC03",
+    "type": "evm"
+  },
+  "43114": {
+    "name": "Avalanche",
+    "symbol": "AVAX",
+    "chainId": 43114,
+    "rpcUrl": "https://avalanche-mainnet.infura.io/v3/{API_KEY}",
+    "coingeckoId": "avalanche-2",
+    "themeColor": "#E84142",
+    "type": "evm"
+  },
+  "56": {
+    "name": "BSC",
+    "symbol": "BNB",
+    "chainId": 56,
+    "rpcUrl": "https://bsc-mainnet.infura.io/v3/{API_KEY}",
+    "coingeckoId": "binancecoin",
+    "themeColor": "#F3BA2F",
+    "type": "evm"
+  },
+  "42220": {
+    "name": "Celo",
+    "symbol": "CELO",
+    "chainId": 42220,
+    "rpcUrl": "https://celo-mainnet.infura.io/v3/{API_KEY}",
+    "coingeckoId": "celo",
+    "themeColor": "#FBCC5C",
+    "type": "evm"
+  },
+  "324": {
+    "name": "ZKsync",
+    "symbol": "ETH",
+    "chainId": 324,
+    "rpcUrl": "https://zksync-mainnet.infura.io/v3/{API_KEY}",
+    "coingeckoId": "ethereum",
+    "themeColor": "#333333",
+    "type": "evm"
+  },
+  "534352": {
+    "name": "Scroll",
+    "symbol": "ETH",
+    "chainId": 534352,
+    "rpcUrl": "https://scroll-mainnet.infura.io/v3/{API_KEY}",
+    "coingeckoId": "ethereum",
+    "themeColor": "#333333",
+    "type": "evm",
+    "explorer": "https://scrollscan.com"
+  },
+  "1329": {
+    "name": "Sei",
+    "symbol": "SEI",
+    "chainId": 1329,
+    "rpcUrl": "https://sei-mainnet.infura.io/v3/{API_KEY}",
+    "coingeckoId": "sei-network",
+    "themeColor": "#B22222",
+    "type": "evm"
+  },
+  "5000": {
+    "name": "Mantle",
+    "symbol": "MNT",
+    "chainId": 5000,
+    "rpcUrl": "https://mantle-mainnet.infura.io/v3/{API_KEY}",
+    "coingeckoId": "mantle",
+    "themeColor": "#333333",
+    "type": "evm"
+  },
+  "204": {
+    "name": "opBNB",
+    "symbol": "BNB",
+    "chainId": 204,
+    "rpcUrl": "https://opbnb-mainnet.infura.io/v3/{API_KEY}",
+    "coingeckoId": "binancecoin",
+    "themeColor": "#F3BA2F",
+    "type": "evm"
+  },
+  "144": {
+    "name": "XRP",
+    "symbol": "XRP",
+    "chainId": 144,
+    "rpcUrl": "wss://xrplcluster.com",
+    "coingeckoId": "ripple",
+    "themeColor": "#333333",
+    "type": "xrp"
+  },
+  "1000": {
+    "name": "Polkadot",
+    "symbol": "DOT",
+    "chainId": 1000,
+    "rpcUrl": "wss://polkadot-rpc.publicnode.com",
+    "coingeckoId": "polkadot",
+    "themeColor": "#E6007A",
+    "type": "polkadot"
+  },
+  "2": {
+    "name": "Kusama",
+    "symbol": "KSM",
+    "chainId": 2,
+    "rpcUrl": "wss://kusama-rpc.polkadot.io",
+    "coingeckoId": "kusama",
+    "themeColor": "#E6007A",
+    "type": "kusama"
+  },
+  "397": {
+    "name": "NEAR",
+    "symbol": "NEAR",
+    "chainId": 397,
+    "rpcUrl": "https://rpc.mainnet.near.org",
+    "coingeckoId": "near",
+    "themeColor": "#00EC97",
+    "type": "near"
+  },
+  "0": {
+    "name": "Bitcoin",
+    "symbol": "BTC",
+    "chainId": 0,
+    "rpcUrl": "https://bitcoin-mainnet.g.alchemy.com/v2/{API_KEY}",
+    "coingeckoId": "bitcoin",
+    "themeColor": "#F7931A",
+    "type": "btc",
+    "requiresAlchemy": true
+  },
+  "145": {
+    "name": "Bitcoin Cash",
+    "symbol": "BCH",
+    "chainId": 145,
+    "rpcUrl": "https://api.blockchair.com/bitcoin-cash",
+    "coingeckoId": "bitcoin-cash",
+    "themeColor": "#8BC34A",
+    "type": "bitcoin-cash"
+  },
+  "33": {
+    "name": "Litecoin",
+    "symbol": "LTC",
+    "chainId": 33,
+    "rpcUrl": "https://litecoinblockexplorer.net",
+    "coingeckoId": "litecoin",
+    "themeColor": "#345D9D",
+    "type": "ltc"
+  },
+  "4": {
+    "name": "Dogecoin",
+    "symbol": "DOGE",
+    "chainId": 4,
+    "rpcUrl": "https://explorer.dogecoinev.com/api",
+    "coingeckoId": "dogecoin",
+    "themeColor": "#C2A633",
+    "type": "doge"
+  },
+  "501": {
+    "name": "Solana",
+    "symbol": "SOL",
+    "chainId": 501,
+    "rpcUrl": "https://solana-mainnet.g.alchemy.com/v2/{API_KEY}",
+    "coingeckoId": "solana",
+    "themeColor": "#9945FF",
+    "type": "solana",
+    "requiresAlchemy": true
+  },
+  "118": {
+    "name": "Cosmos",
+    "symbol": "ATOM",
+    "chainId": 118,
+    "rpcUrl": "https://rpc.cosmos.network",
+    "coingeckoId": "cosmos",
+    "themeColor": "#8B5CF6",
+    "type": "cosmos"
+  },
+  "24941": {
+    "name": "Osmosis",
+    "symbol": "OSMO",
+    "chainId": 24941,
+    "rpcUrl": "https://rpc-osmosis.blockapsis.com",
+    "coingeckoId": "osmosis",
+    "themeColor": "#750BBB",
+    "type": "osmosis"
+  },
+  "529": {
+    "name": "Secret",
+    "symbol": "SCRT",
+    "chainId": 529,
+    "rpcUrl": "https://rpc.secret.network",
+    "coingeckoId": "secret",
+    "themeColor": "#333333",
+    "type": "secret"
+  },
+  "99": {
+    "name": "Injective",
+    "symbol": "INJ",
+    "chainId": 99,
+    "rpcUrl": "https://rpc.injective.network",
+    "coingeckoId": "injective-protocol",
+    "themeColor": "#0052FF",
+    "type": "cosmos"
+  },
+  "118118": {
+    "name": "Celestia",
+    "symbol": "TIA",
+    "chainId": 118118,
+    "rpcUrl": "https://rpc.celestia.org:26657",
+    "coingeckoId": "celestia",
+    "themeColor": "#7B2BF9",
+    "type": "celestia"
+  },
+  "2147483647": {
+    "name": "Cardano",
+    "symbol": "ADA",
+    "chainId": 2147483647,
+    "rpcUrl": "https://cardano-mainnet.blockfrost.io/api/v0",
+    "coingeckoId": "cardano",
+    "themeColor": "#0033AD",
+    "type": "cardano"
+  },
+  "728126428": {
+    "name": "TRON",
+    "symbol": "TRX",
+    "chainId": 728126428,
+    "rpcUrl": "https://tron-mainnet.g.alchemy.com/v2/{API_KEY}",
+    "coingeckoId": "tron",
+    "themeColor": "#FF0013",
+    "type": "tron",
+    "requiresAlchemy": true
+  },
+  "283": {
+    "name": "Algorand",
+    "symbol": "ALGO",
+    "chainId": 283,
+    "rpcUrl": "https://mainnet-api.algonode.cloud",
+    "coingeckoId": "algorand",
+    "themeColor": "#00E5FF",
+    "type": "algorand"
+  },
+  "295": {
+    "name": "Hedera",
+    "symbol": "HBAR",
+    "chainId": 295,
+    "rpcUrl": "https://mainnet-public.mirrornode.hedera.com",
+    "coingeckoId": "hedera-hashgraph",
+    "themeColor": "#333333",
+    "type": "hedera"
+  },
+  "1729": {
+    "name": "Tezos",
+    "symbol": "XTZ",
+    "chainId": 1729,
+    "rpcUrl": "https://mainnet.api.tez.ie",
+    "coingeckoId": "tezos",
+    "themeColor": "#2C7DF7",
+    "type": "tezos"
+  },
+  "637": {
+    "name": "Aptos",
+    "symbol": "APT",
+    "chainId": 637,
+    "rpcUrl": "https://fullnode.mainnet.aptoslabs.com",
+    "coingeckoId": "aptos",
+    "themeColor": "#333333",
+    "type": "aptos"
+  },
+  "784": {
+    "name": "Sui",
+    "symbol": "SUI",
+    "chainId": 784,
+    "rpcUrl": "https://fullnode.mainnet.sui.io",
+    "coingeckoId": "sui",
+    "themeColor": "#6FBCF0",
+    "type": "sui"
+  },
+  "480": {
+    "name": "Worldchain",
+    "symbol": "WLD",
+    "chainId": 480,
+    "rpcUrl": "https://worldchain-mainnet.g.alchemy.com/v2/{API_KEY}",
+    "coingeckoId": "worldcoin-wld",
+    "themeColor": "#333333",
+    "type": "evm",
+    "requiresAlchemy": true,
+    "hasNativeToken": false
+  },
+  "1101": {
+    "name": "Polygon zkEVM",
+    "symbol": "ETH",
+    "chainId": 1101,
+    "rpcUrl": "https://polygonzkevm-mainnet.g.alchemy.com/v2/{API_KEY}",
+    "coingeckoId": "ethereum",
+    "themeColor": "#8247E5",
+    "type": "evm",
+    "requiresAlchemy": true
+  },
+  "7777777": {
+    "name": "Zora",
+    "symbol": "ETH",
+    "chainId": 7777777,
+    "rpcUrl": "https://zora-mainnet.g.alchemy.com/v2/{API_KEY}",
+    "coingeckoId": "ethereum",
+    "themeColor": "#8B5CF6",
+    "type": "evm",
+    "requiresAlchemy": true
+  },
+  "1514": {
+    "name": "Story",
+    "symbol": "IP",
+    "chainId": 1514,
+    "rpcUrl": "https://story-mainnet.g.alchemy.com/v2/{API_KEY}",
+    "coingeckoId": "story-protocol",
+    "themeColor": "#FF0000",
+    "type": "evm",
+    "requiresAlchemy": true,
+    "hasNativeToken": false
+  },
+  "80084": {
+    "name": "Berachain",
+    "symbol": "BERA",
+    "chainId": 80084,
+    "rpcUrl": "https://berachain-mainnet.g.alchemy.com/v2/{API_KEY}",
+    "coingeckoId": "berachain",
+    "themeColor": "#FF8C00",
+    "type": "evm",
+    "requiresAlchemy": true,
+    "hasNativeToken": false
+  },
+  "42170": {
+    "name": "Arbitrum Nova",
+    "symbol": "ETH",
+    "chainId": 42170,
+    "rpcUrl": "https://arbnova-mainnet.g.alchemy.com/v2/{API_KEY}",
+    "coingeckoId": "ethereum",
+    "themeColor": "#FF9100",
+    "type": "evm",
+    "requiresAlchemy": true
+  },
+  "592": {
+    "name": "Astar",
+    "symbol": "ASTR",
+    "chainId": 592,
+    "rpcUrl": "https://astar-mainnet.g.alchemy.com/v2/{API_KEY}",
+    "coingeckoId": "astar",
+    "themeColor": "#00E5FF",
+    "type": "evm",
+    "requiresAlchemy": true
+  },
+  "7000": {
+    "name": "ZetaChain",
+    "symbol": "ZETA",
+    "chainId": 7000,
+    "rpcUrl": "https://zetachain-mainnet.g.alchemy.com/v2/{API_KEY}",
+    "coingeckoId": "zetachain",
+    "themeColor": "#005A33",
+    "type": "evm",
+    "requiresAlchemy": true
+  },
+  "2020": {
+    "name": "Ronin",
+    "symbol": "RON",
+    "chainId": 2020,
+    "rpcUrl": "https://ronin-mainnet.g.alchemy.com/v2/{API_KEY}",
+    "coingeckoId": "ronin",
+    "themeColor": "#1273EA",
+    "type": "evm",
+    "requiresAlchemy": true
+  },
+  "60808": {
+    "name": "BOB",
+    "symbol": "BOB",
+    "chainId": 60808,
+    "rpcUrl": "https://bob-mainnet.g.alchemy.com/v2/{API_KEY}",
+    "coingeckoId": "bob-token",
+    "themeColor": "#FF9100",
+    "type": "evm",
+    "requiresAlchemy": true
+  },
+  "30": {
+    "name": "Rootstock",
+    "symbol": "RBTC",
+    "chainId": 30,
+    "rpcUrl": "https://rootstock-mainnet.g.alchemy.com/v2/{API_KEY}",
+    "coingeckoId": "rootstock",
+    "themeColor": "#FF9100",
+    "type": "evm",
+    "requiresAlchemy": true
+  },
+  "146": {
+    "name": "Sonic",
+    "symbol": "S",
+    "chainId": 146,
+    "rpcUrl": "https://sonic-mainnet.g.alchemy.com/v2/{API_KEY}",
+    "coingeckoId": "sonic",
+    "themeColor": "#F7931A",
+    "type": "evm",
+    "requiresAlchemy": true
+  },
+  "1088": {
+    "name": "Metis",
+    "symbol": "METIS",
+    "chainId": 1088,
+    "rpcUrl": "https://metis-mainnet.g.alchemy.com/v2/{API_KEY}",
+    "coingeckoId": "metis-token",
+    "themeColor": "#00D2FF",
+    "type": "evm",
+    "requiresAlchemy": true
+  },
+  "33139": {
+    "name": "ApeChain",
+    "symbol": "APE",
+    "chainId": 33139,
+    "rpcUrl": "https://apechain-mainnet.g.alchemy.com/v2/{API_KEY}",
+    "coingeckoId": "apecoin",
+    "themeColor": "#0054FA",
+    "type": "evm",
+    "requiresAlchemy": true
+  },
+  "1284": {
+    "name": "Moonbeam",
+    "symbol": "GLMR",
+    "chainId": 1284,
+    "rpcUrl": "https://moonbeam-mainnet.g.alchemy.com/v2/{API_KEY}",
+    "coingeckoId": "moonbeam",
+    "themeColor": "#53CBC9",
+    "type": "evm",
+    "requiresAlchemy": true
+  },
+  "34443": {
+    "name": "Mode",
+    "symbol": "ETH",
+    "chainId": 34443,
+    "rpcUrl": "https://mode-mainnet.infura.io/v3/{API_KEY}",
+    "coingeckoId": "ethereum",
+    "themeColor": "#DFFE00",
+    "type": "evm"
+  },
+  "666666666": {
+    "name": "Degen",
+    "symbol": "DEGEN",
+    "chainId": 666666666,
+    "rpcUrl": "https://degen-mainnet.g.alchemy.com/v2/{API_KEY}",
+    "coingeckoId": "degen-base",
+    "themeColor": "#521B93",
+    "type": "evm",
+    "requiresAlchemy": true
+  },
+  "747": {
+    "name": "Flow",
+    "symbol": "FLOW",
+    "chainId": 747,
+    "rpcUrl": "https://flow-mainnet.g.alchemy.com/v2/{API_KEY}",
+    "coingeckoId": "flow",
+    "themeColor": "#00EF8B",
+    "type": "evm",
+    "requiresAlchemy": true
+  },
+  "288": {
+    "name": "Boba",
+    "symbol": "BOBA",
+    "chainId": 288,
+    "rpcUrl": "https://boba-mainnet.g.alchemy.com/v2/{API_KEY}",
+    "coingeckoId": "boba-network",
+    "themeColor": "#CBFF00",
+    "type": "evm",
+    "requiresAlchemy": true
+  },
+  "100": {
+    "name": "Gnosis",
+    "symbol": "xDAI",
+    "chainId": 100,
+    "rpcUrl": "https://gnosis-mainnet.g.alchemy.com/v2/{API_KEY}",
+    "coingeckoId": "gnosis",
+    "themeColor": "#04795B",
+    "type": "evm",
+    "requiresAlchemy": true
+  },
+  "252": {
+    "name": "Frax",
+    "symbol": "FRAX",
+    "chainId": 252,
+    "rpcUrl": "https://frax-mainnet.g.alchemy.com/v2/{API_KEY}",
+    "coingeckoId": "frax",
+    "themeColor": "#333333",
+    "type": "evm",
+    "requiresAlchemy": true
+  },
+  "10101": {
+    "name": "Starknet",
+    "symbol": "STRK",
+    "chainId": 10101,
+    "rpcUrl": "https://starknet-mainnet.g.alchemy.com/starknet/version/rpc/v0_10/{API_KEY}",
+    "coingeckoId": "starknet",
+    "themeColor": "#333333",
+    "type": "starknet",
+    "requiresAlchemy": true
+  },
+  "10102": {
+    "name": "Robinhood",
+    "symbol": "RBD",
+    "chainId": 10102,
+    "rpcUrl": "https://robinhood-testnet.g.alchemy.com/v2/{API_KEY}",
+    "coingeckoId": "robinhood",
+    "themeColor": "#00C805",
+    "type": "evm",
+    "requiresAlchemy": true,
+    "hasNativeToken": false
+  },
+  "714": {
+    "name": "BNB Beacon Chain",
+    "symbol": "BNB",
+    "chainId": 714,
+    "rpcUrl": "https://dex.binance.org",
+    "coingeckoId": "binancecoin",
+    "themeColor": "#F3BA2F",
+    "type": "bep2"
+  }
+}

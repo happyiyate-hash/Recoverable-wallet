@@ -1,0 +1,7 @@
+
+[
+  { "symbol": "SCR", "name": "Scroll", "address": "0xd2967f45c4f384DEE52237ac60129057d4030bAB", "decimals": 18, "coingeckoId": "scroll" },
+  { "symbol": "ETH", "name": "Ethereum", "address": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee", "decimals": 18, "coingeckoId": "ethereum", "isNative": true },
+  { "symbol": "USDC", "name": "USD Coin", "address": "0x06eFd012D346668295271BA54228eC724394A1f0", "decimals": 6, "coingeckoId": "usd-coin" },
+  { "symbol": "USDT", "name": "Tether USD", "address": "0xf55BEC9cafDbE8730f096Aa55dad6D22d44099Df", "decimals": 6, "coingeckoId": "tether" }
+]

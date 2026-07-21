@@ -1,0 +1,6 @@
+[
+  { "symbol": "BNB", "name": "BNB", "address": "BNB", "decimals": 8, "coingeckoId": "binancecoin", "isNative": true },
+  { "symbol": "BTCB-1DE", "name": "Bitcoin BEP2", "address": "BTCB-1DE", "decimals": 8, "coingeckoId": "bitcoin-bep2" },
+  { "symbol": "USDT-6D8", "name": "Tether USD", "address": "USDT-6D8", "decimals": 18, "coingeckoId": "tether" },
+  { "symbol": "BUSD-BD1", "name": "Binance USD", "address": "BUSD-BD1", "decimals": 18, "coingeckoId": "binance-usd" }
+]
