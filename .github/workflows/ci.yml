@@ -1,0 +1,91 @@
+name: CI - Build & Check
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+  workflow_dispatch:   # You can also run it manually from the Actions tab
+
+jobs:
+  build:
+    name: Build & Typecheck
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      # 1. Checkout code
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # 2. Setup Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      # 3. Setup Rust + wasm-pack (this is the most important part)
+      - name: Install Rust toolchain
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: wasm32-unknown-unknown
+
+      - name: Install wasm-pack
+        run: curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh
+
+      # 4. Cache Rust for faster builds
+      - name: Cache cargo
+        uses: actions/cache@v4
+        with:
+          path: |
+            \~/.cargo/bin/
+            \~/.cargo/registry/index/
+            \~/.cargo/registry/cache/
+            \~/.cargo/git/db/
+            engine/target/
+          key: \( {{ runner.os }}-cargo- \){{ hashFiles('engine/Cargo.toml') }}
+          restore-keys: |
+            ${{ runner.os }}-cargo-
+
+      # 5. Install Node dependencies
+      - name: Install npm dependencies
+        run: npm ci
+
+      # 6. Build the Rust Wasm engine (this is what was missing)
+      - name: Build Wasm engine
+        working-directory: ./engine
+        run: |
+          echo "Building wallet_engine for Wasm..."
+          wasm-pack build --target web --out-dir pkg --release
+          echo "Wasm package built successfully"
+          ls -la pkg/
+
+      # 7. TypeScript typecheck
+      - name: Typecheck
+        run: npm run typecheck
+
+      # 8. Lint (won't fail the job for now)
+      - name: Lint
+        run: npm run lint
+        continue-on-error: true
+
+      # 9. Next.js production build
+      - name: Build Next.js app
+        run: npm run build
+        env:
+          CI: true
+
+      # 10. Final summary
+      - name: Build summary
+        if: always()
+        run: |
+          echo "========================================"
+          echo "CI finished"
+          echo "========================================"
+          if [ -d "engine/pkg" ]; then
+            echo "Wasm engine package exists"
+            ls -la engine/pkg/
+          else
+            echo "Wasm engine package is MISSING"
+          fi
