@@ -1,6 +1,9 @@
 import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
+  // Capacitor packages the statically exported site from the `out` directory.
+  output: 'export',
+  images: { unoptimized: true,
   /* config options here */
 
   // FIX: Added headers to support Base Smart Wallet popups
@@ -34,7 +37,6 @@ const nextConfig: NextConfig = {
     '@reown/appkit-common',
     '@tanstack/react-query'
   ],
-  images: {
     remotePatterns: [
       {
         protocol: 'https',
